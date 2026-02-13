@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invitation 💝</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-sparkles">
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+    </div>
+
+    <!-- Screen A: Lock Screen -->
+    <section id="lockScreen" class="screen active">
+        <div class="glass-card lock-container">
+            <div class="lock-icon">🔒</div>
+            <h2 class="lock-title">Enter Passcode</h2>
+            <p class="lock-hint">Hmmm, will you be able to guess it?</p>
+            
+            <!-- Passcode Dots -->
+            <div class="passcode-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message hidden">Oopsie, try again</div>
+
+            <!-- Numeric Keypad -->
+            <div class="keypad">
+                <button class="key-btn" data-key="1">1</button>
+                <button class="key-btn" data-key="2">2</button>
+                <button class="key-btn" data-key="3">3</button>
+                <button class="key-btn" data-key="4">4</button>
+                <button class="key-btn" data-key="5">5</button>
+                <button class="key-btn" data-key="6">6</button>
+                <button class="key-btn" data-key="7">7</button>
+                <button class="key-btn" data-key="8">8</button>
+                <button class="key-btn" data-key="9">9</button>
+                <button class="key-btn clear-btn" data-action="clear">Clear</button>
+                <button class="key-btn" data-key="0">0</button>
+                <button class="key-btn delete-btn" data-action="delete">⌫</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screen B: Surprise Reveal -->
+    <section id="surpriseScreen" class="screen hidden">
+        <div class="glass-card surprise-container">
+            <div class="surprise-content">
+                <h1 class="surprise-title">Hello, my love, Sofia</h1>
+                <p class="surprise-text">
+                    No, I don't think that just because you're mine already, it means that it's automatic. You must have thought I don't have plans on inviting you for Valentine's Day, but...  
+                </p>
+            </div>
+            <button class="magic-btn" id="magicBtn">Open me!</button>
+        </div>
+        <div id="heartContainer"></div>
+    </section>
+
+    <!-- Screen C: Main Invitation Video + Choices -->
+    <section id="inviteScreen" class="screen hidden">
+        <video 
+            id="inviteVideo" 
+            class="main-video"
+            playsinline
+            autoplay
+        >
+            <source src="public/invite.mp4" type="video/mp4">
+            Your browser doesn't support video playback.
+        </video>
+        
+        <div class="choice-buttons">
+            <button class="choice-btn yes-btn" id="yesBtn">
+                Yes! 💕
+            </button>
+            <button class="choice-btn no-btn" id="noBtn">
+                No...
+            </button>
+        </div>
+    </section>
+
+    <!-- Screen D: Yes Result -->
+    <section id="yesScreen" class="screen hidden">
+        <video 
+            id="yesVideo" 
+            class="result-video"
+            playsinline
+            autoplay
+        >
+            <source src="public/yes.mp4" type="video/mp4">
+            Your browser doesn't support video playback.
+        </video>
+        
+        <button class="restart-btn hidden" id="restartBtn">
+            Thank you, babi! ♡
+        </button>
+        <p class="surprise-text"><br>You just made me the happiest. I love you so much!</p>
+    </section>
+
+    <!-- Screen E: No Result -->
+    <section id="noScreen" class="screen hidden">
+        <video 
+            id="noVideo" 
+            class="result-video"
+            playsinline
+            autoplay
+        >
+            <source src="public/no.mp4" type="video/mp4">
+            Your browser doesn't support video playback.
+        </video>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
